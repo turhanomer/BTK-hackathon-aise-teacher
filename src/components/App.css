@@ -72,3 +72,18 @@ button:hover {
   background-color: #357abd;
   transform: scale(1.05);
 }
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #357abd;
+}

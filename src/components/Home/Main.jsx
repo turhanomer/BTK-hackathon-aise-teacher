@@ -1,8 +1,8 @@
 // src/App.jsx
-import Sidebar from './components/Sidebar/Sidebar';
-import Avatar from './components/Avatar/Avatar';
-import InputArea from './components/InputArea/InputArea';
-import './App.css';
+import Sidebar from './Sidebar/Sidebar';
+import Avatar from './Avatar/Avatar';
+import InputArea from './InputArea/InputArea';
+import '../App.css';
 
 function App() {
   return (
