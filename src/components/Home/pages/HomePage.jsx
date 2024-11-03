@@ -1,25 +1,30 @@
-// src/components/pages/HomePage.jsx
 import { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Avatar from "../Avatar/Avatar";
 import InputArea from "../InputArea/InputArea";
-
 import './HomePage.css';
 
 function HomePage() {
-  const [response, setResponse] = useState('');
-  const [responseType, setResponseType] = useState('neutral');
+  const [responses, setResponses] = useState([]); 
+  const [responseType, setResponseType] = useState('neutral'); 
+  const [category, setCategory] = useState(''); 
 
   const handleSend = (message) => {
-    setResponse('Bu yapay zeka cevabı!');
-    setResponseType('happy');
+    if (message.trim() !== '') {
+      setResponses((prevResponses) => [...prevResponses, message]); 
+      setResponseType('happy'); 
+    }
+  };
+
+  const handleCategoryClick = (categoryName) => {
+    setCategory(categoryName);
   };
 
   return (
     <div className="home-page">
-      <Sidebar />
+      <Sidebar onCategoryClick={handleCategoryClick} />
       <div className="content">
-        <Avatar response={response} responseType={responseType} />
+        <Avatar response={responses[responses.length - 1]} responseType={responseType} category={category} />
         <InputArea onSend={handleSend} />
       </div>
     </div>

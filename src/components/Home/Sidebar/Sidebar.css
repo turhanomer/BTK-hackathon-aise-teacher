@@ -1,54 +1,132 @@
-/* src/components/Sidebar/Sidebar.css */
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   padding: 20px;
-  background-color: #f7f9fc;
+  background-color: #f0f0f0;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  min-height: 500px; 
+  position: relative;
+  bottom: 62px;
 }
 
-.sidebar:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+.toggle-button {
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer; 
+  padding: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px; 
+  height: 30px; 
 }
 
-.sidebar-item {
-  padding: 12px 20px;
+.bar {
+  height: 4px; 
+  width: 100%; 
+  background-color: #4a90e2; 
+  transition: all 0.3s ease; 
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 0.5s ease-in-out; 
+}
+
+.menu.open {
+  max-height: 500px; 
+}
+
+.menu li {
+  padding: 35px 35px;
   margin: 5px 0;
   border-radius: 8px;
   font-weight: bold;
-  color: #333;
-  background-color: #ffffff;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-size: 1.5rem; 
 }
 
-.sidebar-item::before {
-  content: '👉';
-  font-size: 0.9em;
-  color: #4a90e2;
-  transition: transform 0.2s;
+.vocabulary-button {
+  background-color: #4a90e2; 
+  color: #ffffff; 
 }
 
-.sidebar-item:hover {
-  background-color: #4a90e2;
-  color: white;
+.grammar-button {
+  background-color: #e94e77;
+  color: #ffffff; 
+}
+
+.listening-button {
+  background-color: #f9c74f; 
+  color: #ffffff; 
+}
+
+.writing-button {
+  background-color: #90be6d; 
+  color: #ffffff; 
+}
+
+.menu li:hover {
   transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
 }
 
-.sidebar-item:hover::before {
-  transform: translateX(3px);
-  color: white;
+.small-buttons-container {
+  display: flex; 
+  gap: 10px; 
+  margin-top: -10px; 
 }
 
-.sidebar-item:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+.small-buttons-container {
+  margin-top: -5px; 
+  margin-bottom: 10px; 
+}
+
+.small-button {
+  flex: 1; 
+  padding: 15px; 
+  font-size: 1.2rem;
+  background-color: #4a90e2;
+  color: #ffffff; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.small-button:hover {
+  background-color: #4a90e2;
+}
+.show-old-messages-button {
+  padding: 15px; 
+  font-size: 1.2rem; 
+  background-color: #4a90e2; 
+  color: #ffffff; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  margin-top: 10px; 
+}
+
+.show-old-messages-button:hover {
+  background-color: #4a90e2; 
+}
+
+.old-messages {
+  margin-top: 10px; 
+  padding: 10px; 
+  background-color: #ffffff; 
+  border-radius: 8px; 
 }
