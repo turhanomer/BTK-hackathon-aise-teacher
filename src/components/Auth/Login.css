@@ -1,0 +1,121 @@
+body, .login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/public/background.jpeg') no-repeat center center fixed;
+  background-size: cover; 
+}
+
+.card { 
+  border-radius: 30px;
+  padding: 3rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  animation: slideIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Başlık */
+.card h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4a90e2;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #e67e22; 
+}
+
+.form-control {
+  height: 50px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 25px;
+  border: 2px solid #4a90e2;
+  transition: border-color 0.4s, box-shadow 0.4s;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #357abd;
+  box-shadow: 0 4px 8px rgba(53, 122, 189, 0.3);
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-primary:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.card p a {
+  color: #4a90e2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.card p a:hover {
+  color: #357abd;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.paragraph{
+  margin-top: 15px;
+}
